@@ -1,20 +1,21 @@
 <?php 
     session_start();
-    if ((!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid']))&&(!isset($_SESSION['tek_name'])||empty($_SESSION['tek_name']))) {
-        //echo '<script>window.top.location.href = "http://teknack.in"</script>';
-        echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
+    if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
+        echo '<script>window.top.location.href = "http://teknack.in"</script>';
+        //echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
     }
     
     $curtime = date("Y-m-d H:i:s");
     $itemPresent = false;
     $next_itemPresent = false;
 
-    $user_name = $_SESSION['tek_name'];
-    $user_id = $_SESSION['tek_userid'];
+    $user_name = $_SESSION['tek_fname'];
+    $user_id = $_SESSION['tek_emailid'];
 
     include('database.php');
     include('json_func.php');
-    $chat_name = $_SESSION['tek_name'];
+    $name_array = explode("@" , $_SESSION['tek_emailid']);
+    $chat_name = $name_array[0];
 
     $userifo = "SELECT `u_cashbalance`, `u_itempoints`, `u_quizlevel`, `chat_status` FROM `user` WHERE `tek_userid` = '$user_id'";
     if(!mysqli_query($link , $userifo)){
@@ -128,7 +129,7 @@
     }
 
     //Query for User Cash Balance
-    $user_sql = "SELECT u_cashbalance FROM user WHERE tek_userid = '".$_SESSION['tek_userid']."' LIMIT 1";
+    $user_sql = "SELECT u_cashbalance FROM user WHERE tek_userid = '".$_SESSION['tek_emailid']."' LIMIT 1";
     $user_result = mysqli_query($link , $user_sql);
     if (!$user_result) {
         echo "unable to connect user_2";
@@ -204,8 +205,8 @@
         <script type="text/javascript">
 
         <?php 
-        if (!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid'])) { ?>
-            window.top.location.assign("http://www.teknack.in");
+        if (!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid'])) { ?>
+            window.top.location.assign("http://teknack.in");
         <?php } ?>
 
         setTimeout(function(){  // Whole page reload for item change

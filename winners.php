@@ -1,8 +1,8 @@
 <?php 
     session_start();
-    if ((!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid']))&&(!isset($_SESSION['tek_name'])||empty($_SESSION['tek_name']))) {
-        //echo '<script>window.top.location.href = "http://teknack.in"</script>';
-        echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
+    if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
+        echo '<script>window.top.location.href = "http://teknack.in"</script>';
+        //echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
     }
 
     $curtime = date("Y-m-d H:i:s");
@@ -12,8 +12,8 @@
     $i_biduser_name = array();
     $winnerstatus = false;
 
-    $user_name = $_SESSION['tek_name'];
-    $user_id = $_SESSION['tek_userid'];
+    $user_name = $_SESSION['tek_fname'];
+    $user_id = $_SESSION['tek_emailid'];
 
     include("database.php");
     $userifo = "SELECT `u_cashbalance`, `u_itempoints`, `u_quizlevel`, `chat_status` FROM `user` WHERE `tek_userid` = '$user_id'";

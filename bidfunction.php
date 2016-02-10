@@ -1,8 +1,10 @@
 <?php 
 	session_start();
-	if (!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid'])) {
-		echo "<script language='javascript'> window.top.location.assign('http://www.teknack.in'); </script>"; 
-	}
+	if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
+        echo '<script>window.top.location.href = "http://teknack.in"</script>';
+        //echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
+    }
+	
 	$curtime = date("Y-m-d H:i:s");
 	$itemPresent = false;
 
@@ -49,7 +51,7 @@
             <div class="panel-body" id="bidfnc">
             	<?php 
             		if($itemPresent) {
-            			if ($i_biduser_id==$_SESSION['tek_userid']) { ?>
+            			if ($i_biduser_id==$_SESSION['tek_emailid']) { ?>
 							<h3>You have the highest bid.</h3><br/>
 						<?php }else{ ?>
 							<?php if ($_SESSION['auc_user_cash'] >= $curBidValue1) { ?>

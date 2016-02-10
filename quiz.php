@@ -1,12 +1,12 @@
 <?php 
     session_start();
-    if ((!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid']))&&(!isset($_SESSION['tek_name'])||empty($_SESSION['tek_name']))) {
-        //echo '<script>window.top.location.href = "http://teknack.in"</script>';
-        echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
+    if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
+        echo '<script>window.top.location.href = "http://teknack.in"</script>';
+        //echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
     }
     
-    $user_name = $_SESSION['tek_name'];
-    $user_id = $_SESSION['tek_userid'];
+    $user_name = $_SESSION['tek_fname'];
+    $user_id = $_SESSION['tek_emailid'];
 
     $curtime = date("Y-m-d H:i:s");
     $itemPresent = false;
@@ -14,7 +14,7 @@
     $next_quizPresent = false;
     $quiz_status = false;
 
-    $tek_user = $_SESSION['tek_userid'];
+    $tek_user = $_SESSION['tek_emailid'];
     include('database.php');
     include('json_func.php');
 

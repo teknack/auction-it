@@ -1,21 +1,22 @@
 <?php 
     session_start();
-    if(isset($_POST['userid']) && isset($_POST['username'])){ //use this to test the application
-        $_SESSION['tek_userid'] = $_POST['userid'];
-        $_SESSION['tek_name'] = $_POST['username'];
-    }
-    if ((!isset($_SESSION['tek_userid'])||empty($_SESSION['tek_userid']))&&(!isset($_SESSION['tek_name'])||empty($_SESSION['tek_name']))) {
-        //echo '<script>window.top.location.href = "http://teknack.in"</script>';
-        echo '<script>window.top.location.href = "login.php"</script>';
+    //use this to test the application
+    /*if(isset($_POST['userid']) && isset($_POST['username'])){ 
+        $_SESSION['tek_emailid'] = $_POST['userid'];
+        $_SESSION['tek_fname'] = $_POST['username'];
+    }*/
+    if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
+        echo '<script>window.top.location.href = "http://teknack.in"</script>';
+       //echo '<script>window.top.location.href = "login.php"</script>';
     }else{
-        $user_name = $_SESSION['tek_name'];
-        $user_id = $_SESSION['tek_userid'];
+        $user_name = $_SESSION['tek_fname'];
+        $user_id = $_SESSION['tek_emailid'];
         //*****Set Initial cash Balance Here*****//
         $cashbalance = 30000; 
         include("database.php");
           
-        $tek_userid=$_SESSION['tek_userid'];
-        $tek_name=$_SESSION['tek_name'];
+        $tek_userid = $user_id;
+        $tek_name = $user_name;
                   
         $sql = "SELECT 1 FROM user WHERE tek_userid = '$tek_userid' LIMIT 1";
                   

@@ -1,7 +1,7 @@
 <?php
     session_start();
-    $myUserid = $_SESSION['tek_userid'];
-    $myUsername = $_SESSION['tek_name'];
+    $myUserid = $_SESSION['tek_emailid'];
+    $myUsername = $_SESSION['tek_fname'];
     //error_reporting(0);
 
     include('json_func.php');
