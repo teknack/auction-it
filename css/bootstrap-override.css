@@ -1,0 +1,330 @@
+/*!
+ * Start Bootstrap - Full HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/*body {
+    margin-top: 50px; // Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. 
+}*/
+
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+.icon{
+    height: 70px;
+    width: 220px;
+}
+.full {
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+@media screen and (min-height: 1080px) {
+    body {
+        margin-top: 300px;
+    }
+}
+body{
+    background-color: black;
+}
+#pagebg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+     background: url('../images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    filter: brightness(70%);
+}
+.logo{
+	position: absolute;
+	margin: auto;
+	margin-left: 220px;
+	margin-top: 80px;
+}
+.icon{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+@font-face{
+    font-family: oldlondon;
+    src: url(../fonts/OldLondon.ttf);
+}
+@font-face{
+    font-family: usuzi;
+    src: url(../fonts/usuzibold.ttf);
+}
+.links{
+    position: absolute;
+    margin-top: 400px;
+    font-family: oldlondon;
+}
+.links > a:link , a:visited{
+    color: white;
+}
+.nav-new{
+    background-color: black;
+    height: 80px;
+    font-family: usuzi;
+}
+.navbar-header > a{
+    font-size: 30px;
+}
+.navbar-header > a:link , a:visited{
+    color: white;
+}
+.nav-links{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 15px
+}
+.navbar-brand , .navbar-nav li a {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+}
+.navbar-inverse{
+    background-color: black;
+}
+.dropdown-menu li a{
+    line-height: 50px;
+    height: 50px;
+    padding-top: 0;
+}
+.dropdown-toggle{
+    margin-right: 40px;
+}
+.inst-block{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 175px;
+    color: white;
+}
+.wait-img{
+    position: absolute;
+    background: transparent;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.inst-background{
+    background: url('../images/panel-bg.png');
+    width: 100%;
+    margin-top: 150px;
+    top: 0;
+    left: 0;
+    padding: 0;
+    height: 400px;
+    position: absolute;
+}
+.navbar{
+    margin-bottom: 0px;
+}
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: white;
+}
+ .main-panel{
+    position: absolute;
+    background: url('../images/panel-bg.png');
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 8%;
+    width: 90%;
+    left:0;
+    right: 0;
+    border-radius: 20px;
+    height: 520px;
+   
+ }
+.label{
+    font-size: 30px;
+}
+.main-bid-panel{
+    color: white;
+}
+.main-bid-panel > .panel{
+    background-color: black;
+}
+.main-bid-panel > .panel-default{
+    border: 1px solid #787878 transparent;
+}
+.main-bid-panel > .panel-default > .panel-heading{
+    background-color: #787878;
+    color: white;
+    border-bottom: 1px solid #787878 transparent;
+}
+.bid-function{
+    left: 0;
+    width: 90%;
+    margin-left: 10px;
+}
+.panel-body > .thumbnail{
+   /* margin-left: 112.75px;*/
+   margin-left: 0px;
+}
+.live-bid{
+    left: 0;
+    width: 90%;
+    margin-left: 10px;
+}
+.bid-function > .panel{
+    background: url('../images/panel-bg.png');
+    height: 225px;
+}
+.bid-function > .panel-default{
+    border: 1px solid #787878 transparent;
+}
+.bid-function > .panel-default > .panel-heading{
+    color: black;
+    border-bottom: 1px solid #787878 transparent;
+}
+.live-bid > .panel{
+    background: url('../images/panel-bg.png');
+    height: 225px;
+}
+.live-bid > .panel-default{
+    border: 1px solid #787878 transparent;
+}
+.live-bid > .panel-default > .panel-heading{
+    color: black;
+    border-bottom: 1px solid #787878 transparent;
+}
+.item-info > .label{
+    width: 200px;
+}
+.info-panel{
+    position: absolute;
+    background: url('../images/panel-bg.png');
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 16%;
+    width: 90%;
+    left:0;
+    right: 0;
+    border-radius: 20px;
+}
+.chat-panel{
+    position: absolute;
+    background: url('../images/panel-bg.png');
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 16%;
+    width: 90%;
+    left:0;
+    right: 0;
+    border-radius: 20px;
+    height: 520px;
+    max-height: 900px;
+}
+.auct-winner-list{
+    position: absolute;
+    height: 580px;
+    max-height: 900px;
+    background: transparent;
+    color: black;
+    border: 0;
+    width: 1200px;
+    overflow: auto;
+}
+.auct-winn-panel{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    border: 1px solid black;
+    margin-top: 120px;
+    left: 0;
+    margin-left: 550px;
+}
+.table > thead > tr > th{
+    border-bottom: 1px solid black;
+    color: black;
+}
+.table > tbody > tr > td{
+    border:0;
+    color: black;
+}
+.auct-winner-list > .panel-body > .table{
+    color: white;
+}
+.auct-winner-img{
+    position: absolute;
+    margin-top: 120px;
+}
+.panel > .chat-head {
+    border-top-right-radius:20px;
+    border-top-left-radius: 20px;
+    background-color: #303030 ;
+    opacity: 0.7;
+    color: white;
+}
+.panel > .chat-head > .panel-title{
+    margin-top: 10px;
+}
+.form-group{
+    margin-top: 10px;
+    width: 230px;
+}
+textarea.form-control{
+    height: 50px;
+}
+.send-btn{
+    position: absolute;
+    margin-left: 180px;
+}
+.send-btn > .btn-msg-send {
+    width: 60px;
+}
+#chat-area{
+    height: 370px;
+    overflow-y: auto;
+}
+.radio{
+    font-size: 15px;
+}
+#chat-area span{ 
+    color: white;  
+    padding: 4px 8px; 
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 8px; 
+    margin: 0 5px 0 0; 
+}
+.quiz-form{
+    position: absolute;
+    background: url('../images/panel-bg.png');
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 90%;
+    left:0;
+    right: 0;
+    border-radius: 20px;
+    height: 520px;
+    max-height: 900px;
+}
+.quiz-other-info{
+    position: absolute;
+    background: url('../images/panel-bg.png');
+    color: white;
+    border: 0;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 90%;
+    left:0;
+    right: 0;
+    border-radius: 20px;
+    height: 520px;
+    max-height: 900px;
+}
+.profile-img{
+    float: left;
+}
+.profile-ifo{
+    margin-left: 220px;
+    margin-bottom: 100px;
+}
