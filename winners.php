@@ -96,7 +96,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="http://www.teknack.in/">Teknak</a></li>
+                        <li><a href="http://teknack.in/">Teknack</a></li>
                         <li><a href="join-auction.php">Join The Auction </a></li>
                            <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="instruction.php">Instructions</a></li>
@@ -117,7 +117,7 @@
         <div class = "container">
             <div class="row auct-winner">
                 <div class = "col-md-12 auct-winner-list">
-                    <img src="images/winnernew.png" class="win_background" height="550px" width = "1100px" style="margin-top:2%;"></img>
+                    <img src="images/winnernew.jpg" class="win_background" height="550px" width = "1100px" style="margin-top:2%;"></img>
                     <div class="panel panel-default auct-winn-panel" style="border:0;">
                         <div class="panel-body" style="overflow:auto;">
                             <?php if(!$winnerstatus) { ?>

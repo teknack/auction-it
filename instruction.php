@@ -1,5 +1,5 @@
 <?php
-     session_start();
+    session_start();
    if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
         echo '<script>window.top.location.href = "http://teknack.in"</script>';
         //echo '<script>window.top.location.href = "login.php"</script>'; //use to test the application
@@ -64,7 +64,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="http://www.teknack.in/">Teknak</a></li>
+                        <li><a href="http://teknack.in/">Teknack</a></li>
                         <li><a href="join-auction.php">Join The Auction </a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li class="active"><a href="#">Instructions<span class="sr-only">(current)</span></a></li>
@@ -87,15 +87,15 @@
                 <div class = "inst-block">
                     <h1>Auction Instructions</h1>
                     <ul class="h4">
-                        <li>The Auction shall be open from <span class="text-danger">11:00 IST</span> to <span class="text-danger">23:00 IST</span> everyday.</li><br>
-                        <li>Each Auction period shall last for <span class="text-danger">20 minutes</span>.</li><br>
-                        <li>The Winners of this event would be decided based on the following criteria: </li><br>
-                        <ul>
-                            <li>To win, a player must win <span class="text-info">Atleast Two</span> auction items.</li><br>
-                            <li>A player must spend <span class="text-info">Minimum Cash</span> in order to rank high.</li><br>
-                            <li>Every item purchased would have some <span class="text-info">Value Points</span> which would be added up in the end.</li><br>
-                            <li>If there is a tie then the total <span class="text-info">Number of Items</span> purchased would be considered.</li>
-                        </ul>
+                        <li>The game will be live from <span class="text-danger">11:00 IST</span> to <span class="text-danger">00:00 IST.</li><br>
+                        <li>Two quizes will be held per hour.</li><br>
+                        <li>The correct question will give the partcipant $1000.</li><br>
+                        <li>Every 20 minutes , a new iten will be auctioned.</li><br>
+                        <li>A player can start bidding from based price.</li><br>
+                        <li>The player with highest auction points will be displayed in the leaderboard</li><br>
+                        <li>The auction points depend on number of items bought and cash spent.</li><br>
+                        <li>At the end of the auction, the player with highest bid wins the item and bidding amount is deducted from player cash balance.</li><br>
+
                     </ul>
                 </div>
             </div>

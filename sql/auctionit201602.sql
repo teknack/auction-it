@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2016 at 03:29 PM
+-- Generation Time: Feb 10, 2016 at 04:27 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -47,7 +47,7 @@ INSERT INTO `admin_user` (`username`, `password`, `master_admin_control`) VALUES
 
 CREATE TABLE `items` (
   `i_id` int(11) NOT NULL COMMENT 'Successive Diff: 321',
-  `i_name` varchar(30) NOT NULL,
+  `i_name` varchar(40) NOT NULL,
   `i_imgpath` varchar(50) NOT NULL,
   `i_desc` text NOT NULL,
   `i_baseprice` int(11) NOT NULL DEFAULT '0',
@@ -60,6 +60,65 @@ CREATE TABLE `items` (
   `i_biduser_name` varchar(50) DEFAULT NULL,
   `i_is_won` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `items`
+--
+
+INSERT INTO `items` (`i_id`, `i_name`, `i_imgpath`, `i_desc`, `i_baseprice`, `i_actualprice`, `i_increment`, `i_starttime`, `i_endtime`, `i_bidvalue`, `i_biduser_id`, `i_biduser_name`, `i_is_won`) VALUES
+(154321, 'Sir Alex Fergussons Chewing Gum', 'item/item1.png', 'Arguably the best manager in history of football,the secret for his calm calculative brain-His chewing gum is on sale !! MANU fans get your bids onn', 200, 400, 100, '2016-02-13 13:30:00', '2016-02-13 13:50:00', 0, '', '', 0),
+(154642, 'Nokia 1100', 'item/item2.png', 'ever thought about a unbreakable phone?This was probably the first in the league. Get your hands on the iconic nokia cell phone', 50, 100, 150, '2016-02-13 14:00:00', '2016-02-13 14:20:00', 0, '', '', 0),
+(154963, 'Blue&Black/White&Gold', 'item/item3.png', 'The dress that has been creating buzz on the social media is here for grab!! Make the chance count!', 500, 1000, 100, '2016-02-13 14:30:00', '2016-02-13 14:50:00', 0, '', '', 0),
+(155284, 'Messi''s 5th ballon d''or', 'item/item4.png', 'This lad been sensational for years now ! Winning the 5th ballon d''or stamps his authority over the football world, Here is his latest trophy on auction to raise money for charity', 1000, 2000, 200, '2016-02-13 15:00:00', '2016-02-13 15:20:00', 0, '', '', 0),
+(155605, 'Ronaldo''s Statue with Messi''s name', 'item/item5.png', 'The ronaldo  statue in madrid now has messi''s name inscribed on it! What a thing to own!keep biding! ', 750, 1500, 150, '2016-02-13 15:30:00', '2016-02-13 15:50:00', 0, '', '', 0),
+(155926, 'Kai Greene''s Protiens', 'item/item6.png', 'One of the best body-builders has his secret open to us! All fitness enthusiasts keep your eyes on it!', 600, 1200, 150, '2016-02-13 16:00:00', '2016-02-13 16:20:00', 0, '', '', 0),
+(156247, 'Bear Grylls Half Eaten Worm', 'item/item7.png', 'The discovery channel sensational show host bear grylls surely has a liking for wired food items!Here is one from his show! ', 300, 600, 100, '2016-02-13 16:30:00', '2016-02-13 16:50:00', 0, '', '', 0),
+(156568, 'Driverless Car', 'item/item8.png', 'Ever heared about googles project to build driverless cars? Here is one which existed long before they even started making one!', 1000, 2000, 150, '2016-02-13 17:00:00', '2016-02-13 17:20:00', 0, '', '', 0),
+(156889, 'Star Wars Lightsaber', 'item/item9.png', 'May the force be with you!', 750, 1500, 150, '2016-02-13 17:30:00', '2016-02-13 17:50:00', 0, '', '', 0),
+(157210, 'Conjuring Chair', 'item/item10.png', 'our admin has emmense love for horror movies! Here is one from his closet', 600, 1200, 200, '2016-02-13 18:00:00', '2016-02-13 18:20:00', 0, '', '', 0),
+(157531, 'Bond Aston Martin Classic', 'item/item11.png', 'Gentlemen spies have been a attraction to everyone and what better than Bond, James Bond! Here is one of the best from his fleet', 1500, 3000, 250, '2016-02-13 18:30:00', '2016-02-13 18:50:00', 0, '', '', 0),
+(157852, 'Rodger Feds Wimbledon Replica', 'item/item12.png', 'The man who has won over 14 Grand slams  has decided to do some donations! Here is a replica of his first wimbeldon singles championship!', 1000, 2000, 150, '2016-02-13 19:00:00', '2016-02-13 19:20:00', 0, '', '', 0),
+(158173, 'Titanics gold wreck', 'item/item13.png', 'The most famous hsip had over a ton of gold onboard before it sank, our diver have managed to recover most of it! Here it is for auction now! ', 1750, 2500, 250, '2016-02-13 19:30:00', '2016-02-13 19:50:00', 0, '', '', 0),
+(158494, 'Sir Alan Turings Christopher', 'item/item14.png', 'The best machine made so far by one of the best mathematicians ever! Here is a working prototype of the machine which helped Britain in the world war', 2000, 4000, 250, '2016-02-13 20:00:00', '2016-02-13 20:20:00', 0, '', '', 0),
+(158815, 'Hitlers secret reading glasses', 'item/item15.png', 'The best leader also had great fascinations for extravagant devices ! Here is one of his own special glasses designed to read secret messages ', 500, 1000, 200, '2016-02-13 20:30:00', '2016-02-13 20:50:00', 0, '', '', 0),
+(159136, 'Winston churchill cigar', 'item/item16.png', 'A man who build his aura around his personality! Certainly the cigar had to do lot in building the aura! We have managed to get one for you!!', 700, 1400, 150, '2016-02-13 21:00:00', '2016-02-13 21:20:00', 0, '', '', 0),
+(159457, 'Malinga wig', 'item/item17.png', 'The most lethal and popular limited overs bowler is certainly well known for his hairstyle! Here is wig from the man himself! ', 550, 1100, 100, '2016-02-13 21:30:00', '2016-02-13 21:50:00', 0, '', '', 0),
+(159778, 'Sherapovas racquet', 'item/item18.png', 'Does this lady need any introduction?? Certainly no! here is a raquet from her closet up for auction coming in next!', 1500, 3000, 250, '2016-02-13 22:00:00', '2016-02-13 22:20:00', 0, '', '', 0),
+(160099, 'Schumachers last race car', 'item/item19.png', 'Arguably the best F1 driver to have come up is the past century!here is his ferrari championship race car!', 2500, 5000, 250, '2016-02-13 22:30:00', '2016-02-13 22:50:00', 0, '', '', 0),
+(160420, 'Empty mumbai local train', 'item/item20.png', 'No asking for the 4th seat anymore!', 5000, 10000, 450, '2016-02-13 23:00:00', '2016-02-13 23:20:00', 0, '', '', 0),
+(160741, 'Zoozoo', 'item/item21.png', 'the most popular mascot from the house of vodafone! Here is one for auction given by vodafone themselves! Start bidding folks!', 500, 1000, 100, '2016-02-13 23:30:00', '2016-02-13 23:50:00', 0, '', '', 0),
+(161062, 'Dimitri Vegas DJ booth', 'item/item22.png', 'Worlds best DJ has decided to sell his DJ booth! Anyone intrested?', 1500, 3000, 150, '2016-02-14 00:00:00', '2016-02-14 00:20:00', 0, '', '', 0),
+(161383, 'Dravids WK glove', 'item/item23.png', 'There isnt a more selfless team man! Here is the wicket keeping gloves ge used when asked to keep wickets for team India', 800, 1600, 150, '2016-02-14 00:30:00', '2016-02-14 00:50:00', 0, '', '', 0),
+(161704, 'super luxury yatch', 'item/item24.png', 'Easily one the most luxurious posessions one can have !', 4000, 8000, 200, '2016-02-14 01:00:00', '2016-02-14 01:20:00', 0, '', '', 0),
+(162025, 'Google Glasses', 'item/item25.png', 'We have our hands on one of the first prototypes, Here it is on Auctio for you guys!!', 1250, 2500, 150, '2016-02-14 01:30:00', '2016-02-14 01:50:00', 0, '', '', 0),
+(162346, 'SachinTendulkar signed MRF bat.', 'item/item26.png', 'The God of Cricket has decided to raise money for charity from this Auction. Raise your voice all SRT fans.', 1000, 2000, 150, '2016-02-14 02:00:00', '2016-02-14 02:20:00', 0, '', '', 0),
+(162667, 'Steve Job used Macintosh.', 'item/item27.png', 'What''s better than a mac used by the legend himself!', 1250, 2250, 200, '2016-02-14 13:30:00', '2016-02-14 13:50:00', 0, '', '', 0),
+(162988, 'Ancient mummy from pyramid of giza', 'item/item28.png', ' Mummy which is close to 3000 years old! If you have a craze for ancient stuff, well it cant get more ancient than this. Come on and raise your voice!', 750, 1500, 150, '2016-02-14 14:00:00', '2016-02-14 14:20:00', 0, '', '', 0),
+(163309, 'PK?s Radio transistor', 'item/item29.png', 'After finding the remote controller, P.K doesn?t need this radio anymore as the radio frequency doesn?t reach their planet, he gave it up for auction.', 500, 750, 100, '2016-02-14 14:30:00', '2016-02-14 14:50:00', 0, '', '', 0),
+(163630, 'The IRONTHRONE', 'item/item30.png', 'The throne in which no king should sit comfortably. They should know the price one has to pay to lead a king?s commanding life. The throne was allegedly forged from the 1,000 swords that had been surrendered to Aegon in the War of Conquest by the lords who had offered their fealty.', 1500, 2750, 150, '2016-02-14 15:00:00', '2016-02-14 15:20:00', 0, '', '', 0),
+(163951, 'Captain america?s shield', 'item/item31.png', 'Captain America''s shield is next on the list. This shield is composed of a unique alloy of Vibranium, steel, and an unknown third component. It is virtually indestructible. If you guys got a lot of bad enemies out there, I guess you need this one!', 1500, 2500, 200, '2016-02-14 15:30:00', '2016-02-14 15:50:00', 0, '', '', 0),
+(164272, ' James Bond''s golden gun', 'item/item32.png', 'The iconic thriller star Sean Connery was seen holding this golden gun in the film''s poster. The gun was a part of Christie''s Popular Culture: Film and Entertainment'' auction in London. Originally, the gun was never meant to be used in the movie, but this happened to be used as the original Walther PPK pistol didn''t turn up.', 1250, 1750, 100, '2016-02-14 16:00:00', '2016-02-14 16:20:00', 0, '', '', 0),
+(164593, 'World?s oldest champagne', 'item/item33.png', 'What''s more expensive than the most expensive bottle of Dom Perignon ever sold? The answer: a nearly 200-year-old bottle of champagne that spent the last two centuries at the bottom of the ocean.\nIn July 2010, divers off the Aaland archipelago on the Finnish coast discovered 145 bottles of wine and champagne that had gone down with the ship, a two-masted schooner which ran aground sometime between 1825 and 1830. The name of the ship and its intended destination are still unknown, although it''s speculated that they were en route to the court of the Russian tsar in St. Petersburg.\n', 1000, 2000, 250, '2016-02-14 16:30:00', '2016-02-14 16:50:00', 0, '', '', 0),
+(164914, 'The  Batman suit', 'item/item34.png', 'Ben Affleck has his new one ! You can grab the one from Dark night rises used by Christian Bale', 2000, 2500, 250, '2016-02-14 17:00:00', '2016-02-14 17:20:00', 0, '', '', 0),
+(165235, 'Skin colored headphones to use during le', 'item/item35.png', 'A boring lecture can be fun when you?re listening to music and smiling at the professor. Get this flesh colored earphones and get attendance for fun. Exclusively for engineering students.', 500, 750, 100, '2016-02-14 17:30:00', '2016-02-14 17:50:00', 0, '', '', 0),
+(165556, 'Invisibility cloak (harry potter)', 'item/item36.png', 'Wanna sneak around at night or do some mischief without getting noticed!  This guess you?ll know how to use it. If not ask any harry potter fan! ', 750, 1500, 100, '2016-02-14 18:00:00', '2016-02-14 18:20:00', 0, '', '', 0),
+(165877, 'James lebron Shoes 12', 'item/item37.png', 'The legendary basket ball player decides to donate all the money raised to charity! Raise your voice folks!', 1200, 1850, 100, '2016-02-14 18:30:00', '2016-02-14 18:50:00', 0, '', '', 0),
+(166198, 'The grandfather clock ', 'item/item38.png', 'This ancient clock was sold for more than a million in a recent auction at California. The buyer(anonymous) donated this for teknack. ', 500, 1250, 150, '2016-02-14 19:00:00', '2016-02-14 19:20:00', 0, '', '', 0),
+(166519, 'Snitch (Harry Potter)', 'item/item39.png', 'One for all the  Harry potter fans! Get Set to bid folks! ', 1250, 1500, 150, '2016-02-14 19:30:00', '2016-02-14 19:50:00', 0, '', '', 0),
+(166840, 'samsung virtual reality', 'item/item40.png', 'A GenNext techonlogy prototype is next for auction!!', 1500, 3000, 200, '2016-02-14 20:00:00', '2016-02-14 20:20:00', 0, '', '', 0),
+(167161, '3d printing pen', 'item/item41.png', 'A pen that writes is 3D would definetly one of the best posessions you could have.This surely desrves a high bid, Get it going high folks!', 1500, 2500, 150, '2016-02-14 20:30:00', '2016-02-14 20:50:00', 0, '', '', 0),
+(167482, 'self stiring mug', 'item/item42.png', 'One for all the lazt asses out there!', 500, 750, 100, '2016-02-14 21:00:00', '2016-02-14 21:20:00', 0, '', '', 0),
+(167803, 'vintage rx100', 'item/item43.png', 'Men are seperated from the boys when the ride their bikes! This is certainly one for the men! Bid to get one of the classic editions!', 1500, 2000, 150, '2016-02-14 21:30:00', '2016-02-14 21:50:00', 0, '', '', 0),
+(168124, 'HM Ambassador Car', 'item/item44.png', 'The classic vintage every Indian once owned.', 1000, 2000, 150, '2016-02-14 22:00:00', '2016-02-14 22:20:00', 0, '', '', 0),
+(168445, 'Tommy Hilfiger limited edition watch', 'item/item45.png', 'The premium brand which everyone wants to own! Here is a chance to have one!', 1000, 1750, 100, '2016-02-14 22:30:00', '2016-02-14 22:50:00', 0, '', '', 0),
+(168766, '1967 Chevrolet Impala', 'item/item46.png', 'You gotta be hot to ride this one. Winchesters Bros slaying it since 1981.', 1500, 2500, 200, '2016-02-14 23:00:00', '2016-02-14 23:20:00', 0, '', '', 0),
+(169087, 'Cindrella Glass Shoes', 'item/item47.png', 'A good pair of heels can change your life forever. Cinderella is proof!', 750, 1250, 150, '2016-02-14 23:30:00', '2016-02-14 23:50:00', 0, '', '', 0),
+(169408, 'Beverly Hills Mansion', 'item/item48.png', 'Beverly hills surely is one of the best areas to reside in! Bid high to get your own!', 850, 1250, 150, '2016-02-15 00:00:00', '2016-02-15 00:20:00', 0, '', '', 0),
+(169729, 'Kobe Bryant Signed Jersey', 'item/item49.png', 'The legend fom NBA has given a autograph on this jersey and we have it here on auction for you guys!', 3000, 7000, 700, '2016-02-15 00:30:00', '2016-02-15 00:50:00', 0, '', '', 0),
+(170050, 'Tomorrow Land Tickets', 'item/item50.png', 'The heaven for EDM lovers!surely you want to visit it atleast once, Don?t you? Here is a ticket on offer ..Gear up for a bid all EDM lovers!', 1500, 2000, 200, '2016-02-15 01:00:00', '2016-02-15 01:20:00', 0, '', '', 0),
+(170371, 'Cocacola Recipe', 'item/item51.png', 'The best kept secret is now revealed! We found it written in an old diary.', 2000, 3000, 300, '2016-02-15 01:30:00', '2016-02-15 01:50:00', 0, '', '', 0),
+(170692, 'MF Hussain Last Painting', 'item/item52.png', 'The master of modern art had created this amazing art piece of art which we have in store next. ', 1200, 1700, 100, '2016-02-15 02:00:00', '2016-02-15 02:20:00', 0, '', '', 0),
+(171013, 'Casino Table', 'item/item53.png', 'Once in Las Vegas , it served in a legendary game!', 1300, 2100, 150, '2016-02-15 02:30:00', '2016-02-15 02:50:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -208,13 +267,6 @@ CREATE TABLE `user` (
   `chat_status` int(1) NOT NULL,
   `quiz_attempt_status` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`tek_userid`, `tek_name`, `u_firstvisit`, `u_cashbalance`, `u_cashspent`, `meg_points`, `u_itemswon`, `u_itempoints`, `u_quizlevel`, `chat_status`, `quiz_attempt_status`) VALUES
-('mitesh@gmail.com', 'mit17k', 1, 30000, 0, 0, 0, 0, 0, 0, 0);
 
 --
 -- Indexes for dumped tables

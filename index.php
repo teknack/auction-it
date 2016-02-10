@@ -7,7 +7,7 @@
     }*/
     if ((!isset($_SESSION['tek_emailid'])||empty($_SESSION['tek_emailid']))&&(!isset($_SESSION['tek_fname'])||empty($_SESSION['tek_fname']))) {
         echo '<script>window.top.location.href = "http://teknack.in"</script>';
-       //echo '<script>window.top.location.href = "login.php"</script>';
+        //echo '<script>window.top.location.href = "login.php"</script>';
     }else{
         $user_name = $_SESSION['tek_fname'];
         $user_id = $_SESSION['tek_emailid'];

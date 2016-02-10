@@ -344,7 +344,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="http://www.teknack.in/">Teknak</a></li>
+                        <li><a href="http://teknack.in/">Teknack</a></li>
                         <li class="active"><a href="#">Join The Auction <span class="sr-only">(current)</span></a></li>
                         <li><a href="quiz.php">Quiz</a></li>
                         <li><a href="instruction.php">Instructions</a></li>
