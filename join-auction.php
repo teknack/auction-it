@@ -88,6 +88,10 @@
         $up_res_usr = mysqli_query($link , $up_query_usr);
         $up_res_itm = mysqli_query($link , $up_query_itm);
 
+        //update mega-event points
+        include('common-code.php');
+        sendScore("auction-it",$up_u_megapoints,$user_id);
+
         //use to debug auto update script
         /*
         if(!$up_res_usr){
