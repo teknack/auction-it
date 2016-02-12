@@ -89,8 +89,8 @@
         $up_res_itm = mysqli_query($link , $up_query_itm);
 
         //update mega-event points
-        include('common-code.php');
-        sendScore("auction-it",$up_u_megapoints,$user_id);
+        //include('common-code.php');
+        //sendScore("auction-it",$up_u_megapoints,$user_id);
 
         //use to debug auto update script
         /*
@@ -154,7 +154,6 @@
     if (!mysqli_num_rows($result) > 0) {
         //Do something here if the result is absent. no item to sell
     }else{ //Result is present
-
         $itemPresent = true;
         $row = mysqli_fetch_assoc($result);
 
@@ -170,8 +169,10 @@
 
         //check whether the item is loaded correctly
         if(readJsonItem('i_id') != $i_id){
-            emptyJsonItem();
-            exportToJsonItemAfter();
+            if($next_itemPresent){
+                emptyJsonItem();
+                exportToJsonItemAfter();
+            }
         }
     }//End of else result is present
     mysqli_close($link);
